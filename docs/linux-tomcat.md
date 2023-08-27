@@ -231,5 +231,20 @@ tomcat-users 태그 사이에 삽입
 # ps -ef | grep tomcat
 # systemctl start tomcat
 ```
-### 12. http://설치서버-IP/manager 에서 접근/인증 하기
+
+### 12. http://설치서버-IP:8080/manager 에서 접근/인증 하기
+<img width="776" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/d6f7e823-0cc3-4b27-8add-4e80858fc7c6">
+
+Username : admin
+Password : manager
+- /usr/local/poscodx2023/tomcat/conf/tomcat-users.xml에서 확인 가능   
+<img width="684" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/a1e34f7c-b432-418e-87ee-8b2b1eaa9734">
+
+- 인증 완료 
+<img width="785" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/174ba608-7594-4f2f-a0a7-21f52f21b38f">
+
+
+
+
+
 
