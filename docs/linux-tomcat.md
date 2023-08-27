@@ -39,10 +39,10 @@ root 경로에서 (톰캣이 sudo로 띄워지기 때문)
 
 ### 6. 브라우저로 접근 하기
 - http://설치서버-IP:8080로 리눅스 웹 브라우저에서 실행
-- ifconfig로 확인해보니, ip 주소 192.168.64.9
+- ifconfig로 확인할 수 있다 
 <img width="674" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/6eb13718-6a86-4ac3-a79c-36aa3eca6b6c">
 
-- http://192.168.64.9:8080 접속 
+- http://ip주소:8080 접속 
 <img width="785" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/77e0536a-b092-4d8c-b5fb-43a93e8bf3af">
 
 ### 7. 톰캣 서버 중지
@@ -235,7 +235,7 @@ tomcat-users 태그 사이에 삽입
 ### 12. http://설치서버-IP:8080/manager 에서 접근/인증 하기
 <img width="776" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/d6f7e823-0cc3-4b27-8add-4e80858fc7c6">
 
-Username : admin
+Username : admin    
 Password : manager
 - /usr/local/poscodx2023/tomcat/conf/tomcat-users.xml에서 확인 가능   
 <img width="684" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/a1e34f7c-b432-418e-87ee-8b2b1eaa9734">
@@ -244,7 +244,7 @@ Password : manager
 <img width="785" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/174ba608-7594-4f2f-a0a7-21f52f21b38f">
 
 ### 13. 이클립스에서 war 파일로 export 
-File -> export -> War File
+File -> export -> War File   
 <img width="583" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/454fa89f-0397-4ad4-848e-37055b772261">
 
 ### 14. 리눅스 서버에 war 파일 띄우기
