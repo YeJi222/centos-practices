@@ -252,9 +252,49 @@ File -> export -> War File
 ```sh
 cd /usr/local/tomcat/webapps
 ```
+<img width="589" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/f31d2e2d-4849-4f5d-9311-83300e786947">
+
 2) server.xml 수정 
-/usr/local/tomcat/conf/server.xml
+- /usr/local/poscodx2023/tomcat/conf/server.xml 수정
+- 삽입할 내용
+```xml
+<Context path="" docBase="/usr/local/poscodx2023/tomcat/webapps/[war 파일 이름]" reloadable="true" />
+```
+- 삽입 위치 
+```text
+<Host name="localhost"  appBase="webapps" unpackWARs="true" autoDeploy="true">
 
+// Host 태그 바로 밑에
+<Context path="" docBase="/usr/local/poscodx2023/tomcat/webapps/myapp" reloadable="true" />
+...
+</Host>
+```
+- 참고) Host 태그 부분 xml 코드
+```xml
+<Host name="localhost"  appBase="webapps" unpackWARs="true" autoDeploy="true">
+    <Context path="" docBase="/usr/local/poscodx2023/tomcat/webapps/myapp" reloadable="true" />
+    <!-- SingleSignOn valve, share authentication between web applications
+         Documentation at: /docs/config/valve.html -->
+    <!--
+    <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
+    -->
 
+    <!-- Access log processes all example.
+         Documentation at: /docs/config/valve.html
+         Note: The pattern used is equivalent to using pattern="common" -->
+    <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
+           prefix="localhost_access_log" suffix=".txt"
+           pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+</Host>
+```
+
+3) tomcat 재실행
+```sh
+systemctl stop tomcat
+systemctl restart tomcat
+```
+4) 브라우저 확인
+- ip주소:8080/myapp
+<img width="412" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/ffe7406d-e4f2-4c50-b28d-638f019e65db">
 
 
