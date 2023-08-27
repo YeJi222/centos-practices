@@ -1,7 +1,7 @@
 ## tomcat9.0 설치 및 설정
 
 ### 1. tomcat9.0 다운로드   
-root 경로에서 
+root 경로에서 (톰캣이 sudo로 띄워지기 때문)
 ```sh
 # wget --no-check-certificate https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.79/bin/apache-tomcat-9.0.79.tar.gz
 ```
@@ -243,7 +243,17 @@ Password : manager
 - 인증 완료 
 <img width="785" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/174ba608-7594-4f2f-a0a7-21f52f21b38f">
 
+### 13. 이클립스에서 war 파일로 export 
+File -> export -> War File
+<img width="583" alt="image" src="https://github.com/YeJi222/centos-practices/assets/70511859/454fa89f-0397-4ad4-848e-37055b772261">
 
+### 14. 리눅스 서버에 war 파일 띄우기
+1) 아래 경로에 war 파일 옮기기
+```sh
+cd /usr/local/tomcat/webapps
+```
+2) server.xml 수정 
+/usr/local/tomcat/conf/server.xml
 
 
 
